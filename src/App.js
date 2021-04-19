@@ -86,9 +86,9 @@ function App() {
             <img
               src={LoginLogo}
               style={{
-                height: "450px",
-                width: "450px",
-                marginBottom: "-60px",
+                height: "300px",
+                width: "300px",
+                marginBottom: "-50px",
               }}
               alt="logo"
             />

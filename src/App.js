@@ -2,7 +2,7 @@ import "./App.css";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Button, LinearProgress } from "@material-ui/core";
 import Main from "./pages/Main";
-import LoginLogo from "./components/Logo/wfh_8.svg";
+import LoginLogo from "./components/Logo/chat.svg";
 import { WebSocketLink } from "@apollo/client/link/ws";
 import { getMainDefinition } from "@apollo/client/utilities";
 import { setContext } from "@apollo/client/link/context";

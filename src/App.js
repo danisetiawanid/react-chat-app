@@ -88,7 +88,7 @@ function App() {
               style={{
                 height: "300px",
                 width: "300px",
-                marginBottom: "-50px",
+                marginBottom: "-30px",
               }}
               alt="logo"
             />

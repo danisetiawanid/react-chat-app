@@ -1,7 +1,6 @@
-import { useQuery } from "@apollo/client";
+import { gql, useQuery } from "@apollo/client";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Divider } from "@material-ui/core";
-import gql from "graphql-tag";
 import { useRecoilState } from "recoil";
 import ContactList from "../../../components/ContactList";
 import { selectedUserState } from "../../../recoil";
@@ -24,10 +23,8 @@ const Contact = () => {
   const { data } = useQuery(GET_USERS, {
     variables: { order_by: { name: "asc" }, _neq: user.sub },
   });
-
   const setSelectedUser = useRecoilState(selectedUserState)[1];
   const users = [{ id: null, name: "LOBI" }];
-
   if (data && data.users) {
     users.push(...data.users);
   }
@@ -37,7 +34,7 @@ const Contact = () => {
         return (
           <div key={u.id} onClick={() => setSelectedUser(u)}>
             <ContactList user={u}></ContactList>
-            <Divider style={{ background: "#333B49" }}></Divider>
+            <Divider style={{ backgroundColor: "#333B49" }}></Divider>
           </div>
         );
       })}
